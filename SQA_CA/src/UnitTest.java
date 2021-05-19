@@ -479,7 +479,7 @@ public class UnitTest {
 
 		assertEquals(1, min);
 
-		// if no grades are in criterion or criterion does not exist returns -9999
+		// if no grades are in Rubric or Rubric does not exist returns -9999
 		Rubric rubricEmpty = controller.createRubric("Test Rubric", null, null);
 
 		int minEmpty = controller.getMinOfRubric(rubricEmpty);
@@ -522,10 +522,96 @@ public class UnitTest {
 
 		assertEquals(4, max);
 
-		// if no grades are in criterion or criterion does not exist returns -9999
+		// if no grades are in Rubric or Rubric does not exist returns -9999
 		Rubric rubricEmpty = controller.createRubric("Test Rubric", null, null);
 
 		int maxEmpty = controller.getMaxOfRubric(rubricEmpty);
+
+		assertEquals(-9999 , maxEmpty);
+		
+	}
+	
+	@Test
+	public void testGetMinOfCriterion() {
+
+		controller = new Controller();
+
+		ArrayList<String> criterion1 = new ArrayList<>();
+
+		criterion1.add(new String("Design"));
+		criterion1.add(new String("Implementation"));
+		criterion1.add(new String("Testing"));
+
+		HashMap<String, Integer> grades1 = new HashMap<String, Integer>();
+		HashMap<String, Integer> grades1a = new HashMap<String, Integer>();
+
+		grades1.put("Design", 3);
+		grades1.put("Implementation", 3);
+		grades1a.put("Design", 2);
+		grades1a.put("Implementation", 4);
+		grades1a.put("Testing", 1);
+
+		StudentGrade studentGrade1 = controller.createStudentGrade("Chloe", grades1);
+		StudentGrade studentGrade1a = controller.createStudentGrade("Mary", grades1a);
+
+		ArrayList<StudentGrade> gradeList1 = new ArrayList<StudentGrade>();
+
+		gradeList1.add(studentGrade1);
+		gradeList1.add(studentGrade1a);
+
+		Rubric rubric1 = controller.createRubric("Test Rubric", criterion1, gradeList1);
+
+		int min = controller.getMinOfCriterion(rubric1, "Implementation");
+
+		assertEquals(3, min);
+
+		// if no grades are in criterion or criterion does not exist returns -9999
+		Rubric rubricEmpty = controller.createRubric("Test Rubric", null, null);
+
+		int minEmpty = controller.getMinOfCriterion(rubricEmpty, "Empty Criterion");
+
+		assertEquals(-9999 , minEmpty);
+		
+	}
+	
+	@Test
+	public void testGetMaxOfCriterion() {
+
+		controller = new Controller();
+
+		ArrayList<String> criterion1 = new ArrayList<>();
+
+		criterion1.add(new String("Design"));
+		criterion1.add(new String("Implementation"));
+		criterion1.add(new String("Testing"));
+
+		HashMap<String, Integer> grades1 = new HashMap<String, Integer>();
+		HashMap<String, Integer> grades1a = new HashMap<String, Integer>();
+
+		grades1.put("Design", 3);
+		grades1.put("Implementation", 3);
+		grades1a.put("Design", 2);
+		grades1a.put("Implementation", 4);
+		grades1a.put("Testing", 1);
+
+		StudentGrade studentGrade1 = controller.createStudentGrade("Chloe", grades1);
+		StudentGrade studentGrade1a = controller.createStudentGrade("Mary", grades1a);
+
+		ArrayList<StudentGrade> gradeList1 = new ArrayList<StudentGrade>();
+
+		gradeList1.add(studentGrade1);
+		gradeList1.add(studentGrade1a);
+
+		Rubric rubric1 = controller.createRubric("Test Rubric", criterion1, gradeList1);
+
+		int max = controller.getMaxOfCriterion(rubric1, "Implementation");
+
+		assertEquals(4, max);
+
+		// if no grades are in criterion or criterion does not exist returns -9999
+		Rubric rubricEmpty = controller.createRubric("Test Rubric", null, null);
+
+		int maxEmpty = controller.getMaxOfCriterion(rubricEmpty, "Empty Criterion");
 
 		assertEquals(-9999 , maxEmpty);
 		

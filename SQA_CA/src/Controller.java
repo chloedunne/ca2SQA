@@ -204,6 +204,7 @@ public class Controller {
 		return intList.get(0);
 	}
 
+	// returns min grade in a Rubric
 	public int getMinOfRubric(Rubric r) {
 
 		ArrayList<Integer> intList = getAllGradesinRubric(r);
@@ -214,9 +215,32 @@ public class Controller {
 
 	}
 
+	// returns max grade in a Rubric
 	public int getMaxOfRubric(Rubric r) {
 
 		ArrayList<Integer> intList = getAllGradesinRubric(r);
+		if (intList != null)
+			return getMax(intList);
+		else
+			return -9999;
+
+	}
+
+	// returns min grade in a Rubric
+	public int getMinOfCriterion(Rubric r, String criterion) {
+
+		ArrayList<Integer> intList = getAllGradesinCriterion(r, criterion);
+		if (intList != null)
+			return getMin(intList);
+		else
+			return -9999;
+
+	}
+
+	// returns max grade in a Rubric
+	public int getMaxOfCriterion(Rubric r, String criterion) {
+
+		ArrayList<Integer> intList = getAllGradesinCriterion(r, criterion);
 		if (intList != null)
 			return getMax(intList);
 		else
