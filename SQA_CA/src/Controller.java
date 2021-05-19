@@ -149,4 +149,32 @@ public class Controller {
 			return 0;
 	}
 
+	// Find standard deviation
+	public double calculateSD(ArrayList<Integer> intList) {
+		double sum = 0.0, standardDeviation = 0.0;
+		int length = intList.size();
+
+		for (int num : intList) {
+			sum += Double.valueOf(num);
+		}
+
+		double mean = sum / length;
+
+		for (int num : intList) {
+			standardDeviation += Math.pow(Double.valueOf(num) - mean, 2);
+		}
+
+		return Math.sqrt(standardDeviation / length);
+	}
+
+	// Get standard deviation of a Rubric
+	public double calculateSDofRubric(Rubric rubric) {
+
+		ArrayList<Integer> intList = getAllGradesinRubric(rubric);
+		if (intList != null)
+			return calculateSD(intList);
+		else
+			return 0;
+	}
+
 }

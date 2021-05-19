@@ -366,5 +366,44 @@ public class UnitTest {
 		assertEquals(0, average2);
 
 	}
+	
+	@Test
+	public void testCalculateSDofRubric() {
+
+		controller = new Controller();
+
+		ArrayList<String> criterion1 = new ArrayList<>();
+
+		criterion1.add(new String("Design"));
+		criterion1.add(new String("Implementation"));
+		criterion1.add(new String("Testing"));
+
+		HashMap<String, Integer> grades1 = new HashMap<String, Integer>();
+		HashMap<String, Integer> grades1a = new HashMap<String, Integer>();
+
+		grades1.put("Design", 3);
+		grades1.put("Implementation", 3);
+		grades1a.put("Design", 2);
+
+		StudentGrade studentGrade1 = controller.createStudentGrade("Chloe", grades1);
+		StudentGrade studentGrade1a = controller.createStudentGrade("Mary", grades1a);
+
+		ArrayList<StudentGrade> gradeList1 = new ArrayList<StudentGrade>();
+
+		gradeList1.add(studentGrade1);
+		gradeList1.add(studentGrade1a);
+
+		Rubric rubric1 = controller.createRubric("Test Rubric", criterion1, gradeList1);
+
+		double standardDeviation = controller.calculateSDofRubric(rubric1);
+
+		assertEquals(0.47140452079103, standardDeviation, 0.001);
+
+		// if no grades are in rubric returns 0
+		Rubric rubric2 = controller.createRubric("Test Rubric", null, null);
+		double standardDeviation1 = controller.calculateSDofRubric(rubric2);
+		assertEquals(0, standardDeviation1);
+
+	}
 
 }
