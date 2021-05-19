@@ -177,4 +177,14 @@ public class Controller {
 			return 0;
 	}
 
+	// Get standard deviation of a criterion
+	public double calculateSDofCriterion(Rubric rubric, String criterion) {
+
+		ArrayList<Integer> intList = getAllGradesinCriterion(rubric, criterion);
+		if (intList != null)
+			return calculateSD(intList);
+		else
+			return 0;
+	}
+
 }
