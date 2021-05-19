@@ -8,8 +8,8 @@
 | 3 | Student Grade Rubric | Create Controller Class | Chloe | 3 | Done |
 | 4 | Student Grade Rubric | Create Unit Test Class | Chloe | 3 | Done |
 | 5 | Student Grade Rubric | Test Driven Development | Chloe | 2 | Done |
-| 6 | Student Grade Rubric | Test Coverage Metric | Chloe | 2 | In Progress |
-| 7 | Student Grade Rubric | Team Version Control | Chloe | 2 | To Be Started |
+| 6 | Student Grade Rubric | Test Coverage Metric | Chloe | 2 | Done |
+| 7 | Student Grade Rubric | Team Version Control | Chloe | 2 | Done |
 | 8 | Student Grade Rubric | Code Review Check List | Chloe | 2 | To Be Started |
 
 ### Task Estimation  
@@ -71,7 +71,8 @@ The test suite I have used to run my unit tests in this project is JUnit 5 and t
 
 ![Example of Code Coverage in Project](https://github.com/chloedunne/ca2SQA/blob/master/SQA_CA/CodeCoverage2.png)
 
-
 # 4. Team Version-Control 
+
+Version control, also known as source control, is the practice of tracking and managing changes to software code. For this project I worked off the develop branch. I then created feature branches off the develop branch for editing parts of the README.md document. These branches are the testcoveragemetric, versioncontrol and codereview branches. Once I finished editing such parts of the document I then merged the feature branch back into develop by creating a pull request on GitHub. Once I have finished this document fully, I will merge the develop branch into the master branch. 
 
 # 5. Code-Review Checklist
