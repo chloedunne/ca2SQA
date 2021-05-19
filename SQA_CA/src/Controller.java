@@ -133,4 +133,20 @@ public class Controller {
 			return 0;
 	}
 
+	// get average of a Criterion
+	public double getAverageOfCriterion(Rubric rubric, String criterion) {
+
+		ArrayList<Integer> intList = getAllGradesinCriterion(rubric, criterion);
+		int total = 0;
+
+		if (intList != null) {
+			for (int i : intList) {
+				total = total + i;
+			}
+			double average = (Double.valueOf(total)) / (Double.valueOf(intList.size()));
+			return average;
+		} else
+			return 0;
+	}
+
 }
