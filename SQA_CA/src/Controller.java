@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class Controller {
@@ -185,6 +186,42 @@ public class Controller {
 			return calculateSD(intList);
 		else
 			return 0;
+	}
+
+	// returns Min number in ArrayList
+	public int getMin(ArrayList<Integer> intList) {
+
+		Collections.sort(intList);
+
+		return intList.get(0);
+	}
+
+	// returns Max number in ArrayList
+	public int getMax(ArrayList<Integer> intList) {
+
+		Collections.sort(intList, Collections.reverseOrder());
+
+		return intList.get(0);
+	}
+
+	public int getMinOfRubric(Rubric r) {
+
+		ArrayList<Integer> intList = getAllGradesinRubric(r);
+		if (intList != null)
+			return getMin(intList);
+		else
+			return -9999;
+
+	}
+
+	public int getMaxOfRubric(Rubric r) {
+
+		ArrayList<Integer> intList = getAllGradesinRubric(r);
+		if (intList != null)
+			return getMax(intList);
+		else
+			return -9999;
+
 	}
 
 }
