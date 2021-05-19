@@ -49,7 +49,19 @@ Total = 24
 
 Average sprint velocity is equal to 24 ÷ 2 = 12.   
 
-# 2. Unit testing and Test-Driven development  
+# 2. Unit Testing and Test-Driven Development  
+
+Test-driven development (TDD) is a software development process that relies on software requirements
+being converted to test cases before software is fully developed, and tracking all software development
+by repeatedly testing the software against all test cases. This is opposed to software being developed 
+first and test cases created later. This process instructs developers to write new code only if an 
+automated test has failed.
+
+A specific commit that shows test-driven development in my code is the [Method and unit test created for creating a Rubric](https://github.com/chloedunne/ca2SQA/commit/8e084584a3c78f5730b666869728131c9672abb9#diff-d432d59d95d0e0999c1394d5b663f3b5c216efa68599620968766e902f0fc9c6) 
+commit. This test case tests both independent paths and boundary cases as there a certain limitations on the 
+amount of criterions a rubric can have. If a rubric has more than 10 criterion it will fail to create and return null
+and if it has less than 10 criterion the rubric will be created successfully. The amount of criterion a rubric has
+is checked in the createRubric function in the Controller class.
 
 # 3. Test Coverage Metric
 
