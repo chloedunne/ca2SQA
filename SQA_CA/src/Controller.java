@@ -63,5 +63,10 @@ public class Controller {
 
 		return criterionList;
 	}
+	
+	// Get a list of all Rubrics
+		public ArrayList<Rubric> getAllRubrics() {
+			return rubricList;
+		}
 
 }

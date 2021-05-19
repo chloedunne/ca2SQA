@@ -111,5 +111,66 @@ public class UnitTest {
 		assertEquals("Test10", criterionList1.get(criterionList1.size() - 1));
 
 	}
+	
+	@Test
+	public void testGetAllRubrics() {
+		controller = new Controller();
+
+		ArrayList<String> criterion1 = new ArrayList<>();
+		ArrayList<String> criterion2 = new ArrayList<>();
+		ArrayList<String> criterion3 = new ArrayList<>();
+
+		criterion1.add(new String("Design"));
+		criterion1.add(new String("Implementation"));
+		criterion1.add(new String("Testing"));
+
+		criterion2.add(new String("Maths"));
+		criterion2.add(new String("English"));
+		criterion2.add(new String("History"));
+
+		criterion3.add(new String("Presentation"));
+		criterion3.add(new String("Taste"));
+		criterion3.add(new String("Use of Ingredients"));
+
+		HashMap<String, Integer> grades1 = new HashMap<String, Integer>();
+		HashMap<String, Integer> grades1a = new HashMap<String, Integer>();
+
+		HashMap<String, Integer> grades2 = new HashMap<String, Integer>();
+
+		grades1.put("Design", 5);
+		grades1.put("Implementation", 3);
+		grades1a.put("Design", 3);
+
+		grades2.put("Maths", 2);
+		grades2.put("English", 4);
+		grades2.put("History", 3);
+
+		StudentGrade studentGrade1 = controller.createStudentGrade("Chloe", grades1);
+		StudentGrade studentGrade1a = controller.createStudentGrade("Mary", grades1a);
+
+		StudentGrade studentGrade2 = controller.createStudentGrade("Sarah", grades2);
+
+		ArrayList<StudentGrade> gradeList1 = new ArrayList<StudentGrade>();
+		ArrayList<StudentGrade> gradeList2 = new ArrayList<StudentGrade>();
+
+		gradeList1.add(studentGrade1);
+		gradeList1.add(studentGrade1a);
+
+		gradeList2.add(studentGrade2);
+
+		Rubric rubric1 = controller.createRubric("Testing Rubric", criterion1, gradeList1);
+		Rubric rubric2 = controller.createRubric("School Rubric", criterion2, gradeList2);
+		Rubric rubric3 = controller.createRubric("Baking Rubric", criterion3, null);
+
+		ArrayList<Rubric> testRubricList = new ArrayList<Rubric>();
+		testRubricList.add(rubric1);
+		testRubricList.add(rubric2);
+		testRubricList.add(rubric3);
+
+		ArrayList<Rubric> rubricList = controller.getAllRubrics();
+
+		assertEquals(testRubricList, rubricList);
+	}
+
 
 }
