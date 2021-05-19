@@ -79,4 +79,24 @@ public class Controller {
 		return null;
 	}
 
+	// Get all grades in a Rubric
+	public ArrayList<Integer> getAllGradesinRubric(Rubric rubric) {
+
+		ArrayList<StudentGrade> studentGrades = rubric.getGrades();
+		ArrayList<Integer> gradeScores = new ArrayList<Integer>();
+
+		if (studentGrades != null) {
+			for (StudentGrade studentGrade : studentGrades) {
+				for (Integer i : studentGrade.getGrade().values()) {
+					gradeScores.add(i);
+				}
+			}
+		}
+
+		if (gradeScores.isEmpty())
+			return null;
+		else
+			return gradeScores;
+	}
+
 }
