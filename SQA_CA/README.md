@@ -67,6 +67,10 @@ is checked in the createRubric function in the Controller class.
 
 The test suite I have used to run my unit tests in this project is JUnit 5 and the code coverage tool I have used is EclEmma. EclEmma is a free Java code coverage tool for Eclipse that brings code coverage analysis directly into the Eclipse workbench. Code coverage is a measurement of how many lines/blocks/arcs of your code are executed while the automated tests are running and so helps you to identify the untested parts of your code. 
 
+![Code Coverage Tool Results](https://github.com/chloedunne/ca2SQA/blob/master/SQA_CA/CodeCoverage.png)
+
+![Example of Code Coverage in Project](https://github.com/chloedunne/ca2SQA/blob/master/SQA_CA/CodeCoverage2.png)
+
 
 # 4. Team Version-Control 
 
