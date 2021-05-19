@@ -63,10 +63,20 @@ public class Controller {
 
 		return criterionList;
 	}
-	
+
 	// Get a list of all Rubrics
-		public ArrayList<Rubric> getAllRubrics() {
-			return rubricList;
+	public ArrayList<Rubric> getAllRubrics() {
+		return rubricList;
+	}
+
+	// Get a specific Rubric by name
+	public Rubric getRubricByName(String name) {
+		for (Rubric r : rubricList) {
+			if (r.getName().equals(name)) {
+				return r;
+			}
 		}
+		return null;
+	}
 
 }

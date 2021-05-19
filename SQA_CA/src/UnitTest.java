@@ -171,6 +171,26 @@ public class UnitTest {
 
 		assertEquals(testRubricList, rubricList);
 	}
+	
+	@Test
+	public void testgetRubricByName() {
+
+		controller = new Controller();
+
+		Rubric rubric1 = controller.createRubric("Rubric1", null, null);
+		Rubric rubric2 = controller.createRubric("Rubric2", null, null);
+
+		Rubric r1 = controller.getRubricByName("Rubric1");
+		Rubric r2 = controller.getRubricByName("Rubric2");
+
+		assertEquals(rubric1, r1);
+		assertEquals(rubric2, r2);
+
+		// returns null if rubric does not exist with given name
+		Rubric r3 = controller.getRubricByName("Rubric3");
+
+		assertEquals(null, r3);
+	}
 
 
 }
