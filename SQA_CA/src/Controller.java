@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Controller {
-	
+
 	private ArrayList<Rubric> rubricList = new ArrayList<Rubric>();
 
 	// Create Rubric
@@ -38,6 +38,18 @@ public class Controller {
 			}
 		}
 		return true;
+	}
+
+	// Create StudentGrade
+	public StudentGrade createStudentGrade(String name, HashMap<String, Integer> grades) {
+
+		if (!checkGrades(grades)) {
+			return null;
+		}
+
+		StudentGrade studentGrade = new StudentGrade(name, grades);
+
+		return studentGrade;
 	}
 
 }
