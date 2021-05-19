@@ -25,7 +25,29 @@ in order to determine the requirements needed to fulfil each task. Considering m
 knowledge on each task, I was able to estimate how long it would take me to code/ document the work 
 completed on each task. I do not have much experience in creating a unit testing class so I estimated
 this would be longer to create than creating the rubric and student grade classes as these are object
-classes which I have created many of before.  
+classes which I have created many of before. 
+
+### Velocity Metric  
+Velocity is a measure of the amount of work a Team can tackle during a single Sprint and is the key 
+metric in Scrum. It is measured in either story points or hours, and is very useful for forecasting as 
+it allows the team to estimate how much work they can do in future sprints. Velocity is calculated at the 
+end of the Sprint by totalling the Points for all fully completed User Stories.
+
+_Velocity Calculation Example_:   
+
+Sprint 1:  
+The team committed to completing 5 user stories and each user story had 4 story points.
+This totals to 20 story points. The team fully completed 4/5 user stories.
+
+Sprint 2:  
+The team committed to completing 4 user stories and each user story had 4 story points.
+This totals to 16 story points. The team fully completed 2/4 user stories.
+
+Sprint 1: 4 user stories x 4 story points = 16  
+Sprint 2: 2 user stories x 4 story points = 8  
+Total = 24  
+
+Average sprint velocity is equal to 24 ÷ 2 = 12.   
 
 # 2. Unit testing and Test-Driven development  
 
