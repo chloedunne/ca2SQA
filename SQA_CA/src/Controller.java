@@ -117,4 +117,20 @@ public class Controller {
 			return gradeScores;
 	}
 
+	// Get average of Rubric
+	public double getAverageOfRubric(Rubric rubric) {
+
+		ArrayList<Integer> intList = getAllGradesinRubric(rubric);
+		int total = 0;
+
+		if (intList != null) {
+			for (int i : intList) {
+				total = total + i;
+			}
+			double average = (Double.valueOf(total)) / (Double.valueOf(intList.size()));
+			return average;
+		} else
+			return 0;
+	}
+
 }
