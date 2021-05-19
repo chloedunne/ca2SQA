@@ -10,7 +10,7 @@
 | 5 | Student Grade Rubric | Test Driven Development | Chloe | 2 | Done |
 | 6 | Student Grade Rubric | Test Coverage Metric | Chloe | 2 | Done |
 | 7 | Student Grade Rubric | Team Version Control | Chloe | 2 | Done |
-| 8 | Student Grade Rubric | Code Review Check List | Chloe | 2 | To Be Started |
+| 8 | Student Grade Rubric | Code Review Check List | Chloe | 2 | Done |
 
 ### Task Estimation  
 Task Estimation is used within a SCRUM framework to accurately plan each task in the sprint backlog.
