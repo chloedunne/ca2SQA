@@ -3,9 +3,9 @@
 ### Sprint Backlog      
 | Task ID | User Story | Task | Task Owner | Task Estimate | Status of Task |
 | --- | ----------- |---- | ----- | ----- | --- |
-| 1 | Student Grade Rubric | Create Rubric Class | Chloe | 1 | To Be Started |
-| 2 | Student Grade Rubric | Create Student Grade Class | Chloe | 1 | To Be Started |
-| 3 | Student Grade Rubric | Create Controller Class | Chloe | 3 | To Be Started |
+| 1 | Student Grade Rubric | Create Rubric Class | Chloe | 1 | Done |
+| 2 | Student Grade Rubric | Create Student Grade Class | Chloe | 1 | Done |
+| 3 | Student Grade Rubric | Create Controller Class | Chloe | 3 | In Progress |
 | 4 | Student Grade Rubric | Create Unit Test Class | Chloe | 3 | To Be Started |
 | 5 | Student Grade Rubric | Test Driven Development | Chloe | 2 | To Be Started |
 | 6 | Student Grade Rubric | Test Coverage Metric | Chloe | 2 | To Be Started |
