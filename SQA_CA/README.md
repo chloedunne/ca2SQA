@@ -10,7 +10,7 @@
 | 5 | Student Grade Rubric | Test Driven Development | Chloe | 2 | Done |
 | 6 | Student Grade Rubric | Test Coverage Metric | Chloe | 2 | Done |
 | 7 | Student Grade Rubric | Team Version Control | Chloe | 2 | Done |
-| 8 | Student Grade Rubric | Code Review Check List | Chloe | 2 | To Be Started |
+| 8 | Student Grade Rubric | Code Review Check List | Chloe | 2 | Done |
 
 ### Task Estimation  
 Task Estimation is used within a SCRUM framework to accurately plan each task in the sprint backlog.
@@ -76,3 +76,17 @@ The test suite I have used to run my unit tests in this project is JUnit 5 and t
 Version control, also known as source control, is the practice of tracking and managing changes to software code. For this project I worked off the develop branch. I then created feature branches off the develop branch for editing parts of the README.md document. These branches are the testcoveragemetric, versioncontrol and codereview branches. Once I finished editing such parts of the document I then merged the feature branch back into develop by creating a pull request on GitHub. Once I have finished this document fully, I will merge the develop branch into the master branch. 
 
 # 5. Code-Review Checklist
+
+Code review is a software quality assurance activity which allows a developer's fellow peers to check their code for mistakes. Code review helps to improve  both the overall quality of a software component and the skills of the developer.
+ 
+### Code Review Checklist
+
+A good code review checklist focuses on top-priority issues and doesn’t encourage nit-picking by fellow programmers. Good questions to have on a checklist are below:  
+
+Is the code following the coding standards and guidelines?
+Is the code easily understandable?
+Can I unit test the code easily?
+Is the same code duplicated?
+Is a function too large/ doing too many things?
+
+
