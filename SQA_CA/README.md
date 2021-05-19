@@ -5,10 +5,10 @@
 | --- | ----------- |---- | ----- | ----- | --- |
 | 1 | Student Grade Rubric | Create Rubric Class | Chloe | 1 | Done |
 | 2 | Student Grade Rubric | Create Student Grade Class | Chloe | 1 | Done |
-| 3 | Student Grade Rubric | Create Controller Class | Chloe | 3 | In Progress |
-| 4 | Student Grade Rubric | Create Unit Test Class | Chloe | 3 | In Progress |
-| 5 | Student Grade Rubric | Test Driven Development | Chloe | 2 | To Be Started |
-| 6 | Student Grade Rubric | Test Coverage Metric | Chloe | 2 | To Be Started |
+| 3 | Student Grade Rubric | Create Controller Class | Chloe | 3 | Done |
+| 4 | Student Grade Rubric | Create Unit Test Class | Chloe | 3 | Done |
+| 5 | Student Grade Rubric | Test Driven Development | Chloe | 2 | Done |
+| 6 | Student Grade Rubric | Test Coverage Metric | Chloe | 2 | In Progress |
 | 7 | Student Grade Rubric | Team Version Control | Chloe | 2 | To Be Started |
 | 8 | Student Grade Rubric | Code Review Check List | Chloe | 2 | To Be Started |
 
@@ -63,7 +63,10 @@ amount of criterions a rubric can have. If a rubric has more than 10 criterion i
 and if it has less than 10 criterion the rubric will be created successfully. The amount of criterion a rubric has
 is checked in the createRubric function in the Controller class.
 
-# 3. Test Coverage Metric
+# 3. Test Coverage Metric 
+
+The test suite I have used to run my unit tests in this project is JUnit 5 and the code coverage tool I have used is EclEmma. EclEmma is a free Java code coverage tool for Eclipse that brings code coverage analysis directly into the Eclipse workbench. Code coverage is a measurement of how many lines/blocks/arcs of your code are executed while the automated tests are running and so helps you to identify the untested parts of your code. 
+
 
 # 4. Team Version-Control 
 
