@@ -99,4 +99,22 @@ public class Controller {
 			return gradeScores;
 	}
 
+	// Get all grades in a Rubric criterion
+	public ArrayList<Integer> getAllGradesinCriterion(Rubric rubric, String criterion) {
+
+		ArrayList<StudentGrade> studentGrades = rubric.getGrades();
+		ArrayList<Integer> gradeScores = new ArrayList<Integer>();
+
+		if (studentGrades != null) {
+			for (StudentGrade studentGrade : studentGrades) {
+				gradeScores.add(studentGrade.getGrade().get(criterion));
+			}
+		}
+
+		if (gradeScores.isEmpty())
+			return null;
+		else
+			return gradeScores;
+	}
+
 }

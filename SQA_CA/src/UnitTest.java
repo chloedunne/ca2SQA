@@ -237,5 +237,50 @@ public class UnitTest {
 		ArrayList<Integer> intListEmpty = controller.getAllGradesinRubric(rubric2);
 		assertEquals(null, intListEmpty);
 	}
+	
+	@Test
+	public void testGetAllGradesInCriterion() {
+
+		controller = new Controller();
+
+		ArrayList<String> criterion1 = new ArrayList<>();
+
+		criterion1.add(new String("Design"));
+		criterion1.add(new String("Implementation"));
+		criterion1.add(new String("Testing"));
+
+		HashMap<String, Integer> grades1 = new HashMap<String, Integer>();
+		HashMap<String, Integer> grades1a = new HashMap<String, Integer>();
+
+		grades1.put("Design", 5);
+		grades1.put("Implementation", 3);
+		grades1a.put("Design", 3);
+
+		StudentGrade studentGrade1 = controller.createStudentGrade("Chloe", grades1);
+		StudentGrade studentGrade1a = controller.createStudentGrade("Mary", grades1a);
+
+		ArrayList<StudentGrade> gradeList1 = new ArrayList<StudentGrade>();
+
+		gradeList1.add(studentGrade1);
+		gradeList1.add(studentGrade1a);
+
+		Rubric rubric1 = controller.createRubric("Testing Rubric", criterion1, gradeList1);
+
+		ArrayList<Integer> intList = new ArrayList<Integer>();
+		intList.add(5);
+		intList.add(3);
+
+		ArrayList<Integer> intList1 = controller.getAllGradesinCriterion(rubric1, "Design");
+
+		for (int i = 0; i > intList1.size(); i++) {
+			assertEquals(intList.get(i), intList1.get(i));
+		}
+
+		// returns null if no grades are in the rubric
+		Rubric rubric2 = controller.createRubric("Empty Rubric", null, null);
+
+		ArrayList<Integer> intListEmpty = controller.getAllGradesinCriterion(rubric2, "Design");
+		assertEquals(null, intListEmpty);
+	}
 
 }
